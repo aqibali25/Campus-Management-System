@@ -295,7 +295,64 @@ input[type]:checked ~ span.mid {
       padding: 5px 20px;
     }
   }
+
   /* ### MAX-WIDTH 520PX ### */
   @media only screen and (max-width: 520px) {
+    nav {
+      height: 70px;
+      padding: 0 30px;
+    }
+    nav .logo img {
+      width: 50px;
+      height: 50px;
+    }
+    nav .logo .name label {
+      font-size: 1rem;
+    }
+  }
+  /* ### MAX-WIDTH 425PX ### */
+  @media only screen and (max-width: 425px) {
+    nav {
+      height: 65px;
+    }
+    nav .logo img {
+      width: 45px;
+      height: 45px;
+    }
+    nav .logo .name label {
+      font-size: 0.8rem;
+    }
+  }
+
+  /* ### MAX-WIDTH 375PX ### */
+  @media only screen and (max-width: 375px) {
+    nav {
+      height: 65px;
+    }
+    nav .logo img {
+      width: 45px;
+      height: 45px;
+    }
+    nav .logo .name label {
+      font-size: 0.7rem;
+    }
+  }
+  /* ### MAX-WIDTH 350PX ### */
+  @media only screen and (max-width: 350px) {
+    nav .logo .name label {
+      font-size: 0.6rem;
+    }
+  }
+  /* ### MAX-WIDTH 320PX ### */
+  @media only screen and (max-width: 320px) {
+    nav .logo .name label {
+      font-size: 0.5rem;
+    }
+  }
+  /* ### MAX-WIDTH 320PX ### */
+  @media only screen and (max-width: 300px) {
+    nav .logo .name label {
+      display: none;
+    }
   }
 }
