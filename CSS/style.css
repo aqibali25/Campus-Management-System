@@ -221,7 +221,6 @@ input[type]:checked ~ span.mid {
   transform: translateX(-20px);
   opacity: 0;
 }
-
 /* ###  RESPONSIVE STYLE  ### */
 
 /* ### MAX-WIDTH 980PX ### */
