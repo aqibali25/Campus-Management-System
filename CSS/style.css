@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ###  NAV-BAR STYLE  ### */
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  height: 90px;
+  width: 100%;
+  padding: 0 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px #949494;
+}
+/* ###  LOGO STYLE  ### */
+
+.logo {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo img {
+  width: 75px;
+  height: 75px;
+}
+.logo .name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: 15px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: #111111;
+}
+.logo .name label {
+  cursor: pointer;
+}
+/* ###  NAVLINKS AND SIGNUP   ### */
+
+.navAndSignup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  transition: all 0.5s ease;
+}
+/* ###  NAV MENUS/LINKS STYLE  ### */
+.navLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 65%;
+}
+.navLinks a {
+  position: relative;
+  text-decoration: none;
+  color: #111111;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+.navLinks a:hover {
+  color: #e5b300;
+}
+.navLinks a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  bottom: -2px;
+  position: absolute;
+  background: #fff;
+  transition: width 0.5s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after {
+  width: 100%;
+  left: 0;
+  background-color: #e5b300;
+}
+
+/* ###  LOGIN SIGNUP BUTTON STYLE  ### */
+.loginSignUp {
+  display: flex;
+  justify-content: space-between;
+  width: fit-content;
+  column-gap: 15px;
+}
+.loginSignUp a {
+  position: relative;
+  padding: 5px 15px;
+  text-decoration: none;
+  border: 2px solid #e5b300;
+  font-weight: 500;
+  font-size: 0.8rem;
+  transition: all 0.35s ease;
+  z-index: 2;
+}
+
+/* ###  LOGIN BUTTON STYLE  ### */
+.loginSignUp .login {
+  color: #111111;
+}
+.login::before,
+.aboutCampusReadMore::before {
+  transition: all 0.35s ease;
+  content: "";
+  width: 100%;
+  height: 0;
+  background: #e5b300;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.login:hover::before {
+  background: #e5b300;
+  z-index: -1;
+  height: 100%;
+}
+.login:hover {
+  color: #ffffff;
+}
+
+/* ###  SIGNUP BUTTON STYLE  ### */
+
+.loginSignUp .signup {
+  color: #ffffff;
+}
+.signup::before {
+  transition: all 0.35s ease;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #e5b300;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.signup:hover::before {
+  background: #e5b300;
+  z-index: -1;
+  height: 0%;
+}
+.signup:hover {
+  color: #000000;
+}
+
+/* ###  THREE LINES   ### */
+
+.menuButton {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 13%;
+  color: #090909;
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 0.5em;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.menuButton:hover {
+  border: 1px solid white;
+}
+
+.menuButton:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  display: none;
+  visibility: hidden;
+}
+
+.menuButton span {
+  width: 30px;
+  height: 4px;
+  background: #131313;
+  border-radius: 100px;
+  transition: 0.3s ease;
+}
+
+input[type]:checked ~ span.top {
+  transform: translateY(290%) rotate(45deg);
+  width: 40px;
+}
+
+input[type]:checked ~ span.bot {
+  transform: translateY(-270%) rotate(-45deg);
+  width: 40px;
+}
+
+input[type]:checked ~ span.mid {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
+/* ###  RESPONSIVE STYLE  ### */
+
+/* ### MAX-WIDTH 980PX ### */
+@media only screen and (max-width: 980px) {
+  nav .logo img {
+    width: 70px;
+    height: 70px;
+  }
+  nav .logo .name label {
+    font-size: 1rem;
+  }
+  .navLinks a {
+    font-size: 0.8rem;
+  }
+  .loginSignUp a {
+    padding: 3px 10px;
+    font-size: 0.9rem;
+  }
+
+  /* ### MAX-WIDTH 860PX ### */
+
+  @media only screen and (max-width: 860px) {
+    nav .logo img {
+      width: 65px;
+      height: 65px;
+    }
+    nav .logo .name label {
+      font-size: 0.8rem;
+    }
+    .loginSignUp a {
+      padding: 3px 8px;
+      font-size: 0.8rem;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .menuButton {
+      display: flex;
+      z-index: 2;
+    }
+    nav {
+      height: 75px;
+      justify-content: space-between;
+      padding: 0 50px;
+    }
+
+    nav .logo .name label {
+      font-size: 1rem;
+    }
+    .navAndSignup {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: start;
+      gap: 50px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0px;
+      height: 100vh;
+      padding-top: 40px;
+      overflow: hidden;
+      background-color: #ffffff;
+    }
+    .navLinks {
+      flex-direction: column;
+      row-gap: 40px;
+    }
+    .navLinks a {
+      font-size: 1rem;
+    }
+    .loginSignUp a {
+      padding: 5px 20px;
+    }
+  }
+  /* ### MAX-WIDTH 520PX ### */
+  @media only screen and (max-width: 520px) {
+  }
+}
