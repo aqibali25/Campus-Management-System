@@ -19,3 +19,23 @@ menuButton.addEventListener("click", function () {
     navAndSignup.style.width = "60%";
   }
 });
+
+//   IMAGE SHUFFLE
+
+const images = document.querySelectorAll(".image-shuffle img");
+let currentImageIndex = 0;
+
+function shuffleImages() {
+  images.forEach((image) => {
+    image.style.display = "none";
+  });
+
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+  images[currentImageIndex].style.display = "block";
+}
+
+// Shuffle images every 3 seconds
+setInterval(shuffleImages, 3000);
+
+// Show the first image at Start
+images[currentImageIndex].style.display = "block";
