@@ -39,3 +39,8 @@ setInterval(shuffleImages, 3000);
 
 // Show the first image at Start
 images[currentImageIndex].style.display = "block";
+
+// Animation on Load
+AOS.init({
+  duration: 1000,
+});

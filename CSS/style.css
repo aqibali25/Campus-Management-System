@@ -116,7 +116,8 @@ a:hover:after {
   column-gap: 15px;
 }
 .loginSignUp a,
-.getStarted {
+.getStarted,
+.aboutCampusReadMore {
   position: relative;
   padding: 5px 15px;
   text-decoration: none;
@@ -157,10 +158,12 @@ a:hover:after {
 
 /* ###  SIGNUP BUTTON STYLE  ### */
 
-.loginSignUp .signup {
+.loginSignUp .signup,
+.aboutCampusReadMore {
   color: #ffffff;
 }
-.signup::before {
+.signup::before,
+.aboutCampusReadMore::before {
   transition: all 0.35s ease;
   content: "";
   width: 100%;
@@ -171,12 +174,14 @@ a:hover:after {
   left: 0;
   z-index: -1;
 }
-.signup:hover::before {
+.signup:hover::before,
+.aboutCampusReadMore:hover:before {
   background: #e5b300;
   z-index: -1;
   height: 0%;
 }
-.signup:hover {
+.signup:hover,
+.aboutCampusReadMore:hover {
   color: #000000;
 }
 
@@ -343,7 +348,7 @@ section {
 /* ###  DEPARTMENTS CARDS  ### */
 
 .departments {
-  width: 80%;
+  width: 90%;
   height: 80%;
   display: flex;
   justify-content: space-evenly;
@@ -371,6 +376,40 @@ section {
 .departments div a i {
   font-size: 12px;
   text-align: center;
+}
+
+/* ###  ABOUT CAMPUS  ### */
+.section-4 {
+  justify-content: space-evenly;
+  flex-direction: row;
+  height: 80vh;
+}
+.section-4 .aboutCampusImage {
+  width: 35%;
+  height: 70%;
+  overflow: hidden;
+}
+.section-4 img {
+  width: 100%;
+  height: 100%;
+}
+.section-4 .aboutText {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  flex-direction: column;
+  height: 70%;
+  width: 50%;
+}
+.aboutText h2 {
+  font-size: 2rem;
+}
+.aboutText p {
+  font-size: 1.1rem;
+}
+.aboutCampusReadMore {
+  font-size: 1rem;
+  padding: 8px 25px;
 }
 /* ###  RESPONSIVE STYLE  ### */
 
@@ -417,7 +456,33 @@ section {
     width: 85%;
     height: 70%;
   }
-
+  .section-4 {
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100vh;
+    padding: 50px;
+  }
+  .section-4 .aboutCampusImage {
+    width: 85%;
+    height: 50%;
+    overflow: hidden;
+  }
+  .section-4 .aboutText {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 30px;
+    height: 70%;
+    width: 70%;
+    text-align: center;
+  }
+  .aboutText p {
+    font-size: 1.3rem;
+  }
+  .aboutCampusReadMore {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+  }
   /* ### MAX-WIDTH 860PX ### */
 
   @media only screen and (max-width: 860px) {
@@ -495,6 +560,13 @@ section {
     margin-top: 80px;
     width: 85%;
     height: 75%;
+  }
+  .section-4 .aboutText {
+    margin-top: 40px;
+    row-gap: 20px;
+  }
+  .aboutCampusReadMore {
+    padding: 10px 30px;
   }
 }
 
@@ -574,6 +646,19 @@ section {
   .section-3 .title {
     font-size: 1.3rem;
   }
+  .section-4 {
+    height: 80vh;
+  }
+  .aboutText h2 {
+    font-size: 1.8rem;
+  }
+  .aboutText p {
+    font-size: 1rem;
+  }
+  .aboutCampusReadMore {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
 }
 /* ### MAX-WIDTH 425PX ### */
 @media only screen and (max-width: 425px) {
@@ -621,6 +706,16 @@ section {
   .section-3 .line {
     width: 70%;
   }
+  .aboutText h2 {
+    font-size: 1.5rem;
+  }
+  .aboutText p {
+    font-size: 0.8rem;
+  }
+  .aboutCampusReadMore {
+    font-size: 0.8rem;
+    padding: 8px 20px;
+  }
 }
 
 /* ### MAX-WIDTH 375PX ### */
@@ -658,6 +753,16 @@ section {
   }
   .section-3 .title {
     font-size: 1rem;
+  }
+  .section-4 {
+    height: 70vh;
+  }
+  .section-4 .aboutCampusImage {
+    width: 100%;
+    height: 35%;
+  }
+  .section-4 .aboutText {
+    width: 100%;
   }
 }
 /* ### MAX-WIDTH 350PX ### */
@@ -709,5 +814,8 @@ section {
   }
   .departments div a i {
     font-size: 5px;
+  }
+  .aboutText p {
+    font-size: 0.6rem;
   }
 }
