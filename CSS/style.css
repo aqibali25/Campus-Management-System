@@ -324,8 +324,8 @@ section {
   font-size: 1.3rem;
 }
 .getStarted {
-  padding: 10px 25px;
-  font-size: 1.4rem;
+  padding: 9px 25px;
+  font-size: 1.2rem;
 }
 
 /* ###  TRANDINGS   ### */
@@ -411,6 +411,63 @@ section {
   font-size: 1rem;
   padding: 8px 25px;
 }
+
+/* ###  FOOTER  ### */
+
+footer {
+  width: 100%;
+  height: 200px;
+  background-color: #36384e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .socialIcons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 15%;
+}
+footer .socialIcons a {
+  color: #ffffff;
+  font-size: 25px;
+}
+footer .socialIcons a i {
+  transition: all 0.5s ease;
+}
+footer .socialIcons a .fa-facebook:hover {
+  color: #0158af;
+}
+footer .socialIcons a .fa-instagram:hover {
+  background: linear-gradient(#f9ce34, #ee2a7b, #6228d7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+footer .socialIcons a .fa-twitter:hover {
+  color: #5ea0e2;
+}
+footer .footerMenu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  margin: 20px;
+}
+footer .footerMenu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.5s ease;
+}
+footer .footerMenu a:hover {
+  text-decoration: underline;
+}
+footer label {
+  color: #ffffff;
+  font-size: 1rem;
+}
 /* ###  RESPONSIVE STYLE  ### */
 
 /* ### MAX-WIDTH 1024PX ### */
@@ -482,6 +539,13 @@ section {
   .aboutCampusReadMore {
     padding: 12px 30px;
     font-size: 1.2rem;
+  }
+  footer .footerMenu a {
+    font-size: 0.75rem;
+    transition: all 0.5s ease;
+  }
+  footer label {
+    font-size: 0.9rem;
   }
   /* ### MAX-WIDTH 860PX ### */
 
@@ -567,6 +631,15 @@ section {
   }
   .aboutCampusReadMore {
     padding: 10px 30px;
+  }
+  footer .socialIcons {
+    width: 20%;
+  }
+  footer .footerMenu a {
+    font-size: 0.75rem;
+  }
+  footer label {
+    font-size: 0.65rem;
   }
 }
 
@@ -659,6 +732,22 @@ section {
     font-size: 0.9rem;
     padding: 10px 20px;
   }
+  footer .socialIcons {
+    width: 25%;
+  }
+  footer .socialIcons a {
+    font-size: 1.3rem;
+  }
+  footer .footerMenu {
+    width: 80%;
+  }
+  footer .footerMenu a {
+    font-size: 0.7rem;
+    transition: all 0.5s ease;
+  }
+  footer label {
+    font-size: 0.6rem;
+  }
 }
 /* ### MAX-WIDTH 425PX ### */
 @media only screen and (max-width: 425px) {
@@ -716,6 +805,9 @@ section {
     font-size: 0.8rem;
     padding: 8px 20px;
   }
+  footer .footerMenu {
+    width: 90%;
+  }
 }
 
 /* ### MAX-WIDTH 375PX ### */
@@ -764,6 +856,12 @@ section {
   .section-4 .aboutText {
     width: 100%;
   }
+  footer .footerMenu a {
+    font-size: 0.6rem;
+  }
+  footer label {
+    font-size: 0.5rem;
+  }
 }
 /* ### MAX-WIDTH 350PX ### */
 @media only screen and (max-width: 350px) {
@@ -779,6 +877,15 @@ section {
   }
   .backgroundImgText p {
     font-size: 0.7em;
+  }
+  footer .socialIcons {
+    width: 30%;
+  }
+  footer .socialIcons a {
+    font-size: 1.2rem;
+  }
+  footer .footerMenu a {
+    font-size: 0.55rem;
   }
 }
 /* ### MAX-WIDTH 320PX ### */
@@ -817,5 +924,14 @@ section {
   }
   .aboutText p {
     font-size: 0.6rem;
+  }
+  footer .socialIcons a {
+    font-size: 0.8rem;
+  }
+  footer .footerMenu a {
+    font-size: 0.4rem;
+  }
+  footer label {
+    font-size: 0.38rem;
   }
 }
