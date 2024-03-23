@@ -25,20 +25,23 @@ menuButton.addEventListener("click", function () {
 const images = document.querySelectorAll(".image-shuffle img");
 let currentImageIndex = 0;
 
-function shuffleImages() {
-  images.forEach((image) => {
-    image.style.display = "none";
+function slideImages() {
+  images.forEach((image, index) => {
+    if (index === currentImageIndex) {
+      image.style.left = "0";
+    } else {
+      image.style.left = "100%";
+    }
   });
 
   currentImageIndex = (currentImageIndex + 1) % images.length;
-  images[currentImageIndex].style.display = "block";
 }
 
-// Shuffle images every 3 seconds
-setInterval(shuffleImages, 3000);
+// Slide images every 3 seconds
+setInterval(slideImages, 3000);
 
 // Show the first image at Start
-images[currentImageIndex].style.display = "block";
+images[currentImageIndex].style.left = "0";
 
 // Animation on Load
 AOS.init({
