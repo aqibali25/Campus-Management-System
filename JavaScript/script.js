@@ -1,6 +1,6 @@
 const checkBox = document.getElementById("check");
 const navAndSignup = document.getElementById("navAndSignup");
-if (window.screen.width <= "768") {
+if (window.screen.width >= "768") {
   navAndSignup.style.width = "60%";
 }
 checkBox.addEventListener("change", () => {
