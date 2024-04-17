@@ -290,7 +290,7 @@ section {
 }
 .backgroundImgText h2 span,
 .backgroundImgText p {
-  background-color: rgba(229, 179, 0, 0.5);
+  background-color: rgba(229, 179, 0, 0.8);
 }
 
 /* ###  SECTION 2  ### */
@@ -306,6 +306,95 @@ section {
 .getStarted {
   padding: 8px 25px;
   font-size: 1rem;
+}
+
+/* ###  SECTION 3  ### */
+.section-3,
+.section-4 {
+  row-gap: 40px;
+}
+.titleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 5px;
+  width: 50%;
+  height: fit-content;
+}
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+.titleline {
+  width: 150px;
+  height: 8px;
+  border-radius: 50px;
+  background-color: #e5b300;
+}
+.trandingImages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  height: 70%;
+  background-color: #000000;
+  overflow: hidden;
+}
+.trandingImages img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+}
+
+/* ###  SECTION 4  ### */
+.section-4 {
+  margin-top: 30px;
+}
+.departmentMain {
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 70%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.deptCard {
+  margin: 0 10px;
+  text-align: center;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  justify-content: center;
+}
+
+.deptCard img {
+  width: 100%;
+  height: 300px;
+  margin-top: -15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.deptTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.viewMore {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #e5b300;
+}
+
+.viewMore i {
+  margin-left: 5px;
 }
 /* ###  FOOTER  ### */
 
@@ -390,6 +479,15 @@ footer label {
   .getStarted {
     padding: 8px 20px;
   }
+  .departmentMain {
+    row-gap: 40px;
+  }
+  .deptTitle {
+    font-size: 0.8rem;
+  }
+  .viewMore {
+    font-size: 0.6rem;
+  }
   footer .footerMenu a {
     font-size: 0.75rem;
     transition: all 0.5s ease;
@@ -399,7 +497,7 @@ footer label {
   }
   /* ### MAX-WIDTH 860PX ### */
 
-  @media only screen and (max-width: 860px) {
+  @media only screen and (max-width: 880px) {
     nav .logo img {
       width: 65px;
       height: 65px;
@@ -409,6 +507,19 @@ footer label {
     }
     .loginSignUp a {
       padding: 3px 8px;
+      font-size: 0.8rem;
+    }
+    .departmentMain {
+      grid-template-columns: 1fr;
+      margin-bottom: 50px;
+    }
+    .deptCard {
+      margin: 20px;
+    }
+    .deptTitle {
+      font-size: 1.1rem;
+    }
+    .viewMore {
       font-size: 0.8rem;
     }
   }
@@ -502,6 +613,15 @@ footer label {
   .getStarted {
     font-size: 0.8rem;
   }
+  .title {
+    font-size: 1.3rem;
+  }
+  .titleline {
+    width: 100px;
+  }
+  .deptTitle {
+    font-size: 1rem;
+  }
   footer .socialIcons {
     width: 25%;
   }
@@ -549,6 +669,12 @@ footer label {
   .getStarted {
     font-size: 0.7rem;
   }
+  .deptTitle {
+    font-size: 0.9rem;
+  }
+  .viewMore {
+    font-size: 0.7rem;
+  }
   footer .footerMenu {
     width: 90%;
   }
@@ -565,6 +691,18 @@ footer label {
   }
   nav .logo .name label {
     font-size: 0.7rem;
+  }
+  .title {
+    font-size: 1.1rem;
+  }
+  .titleline {
+    width: 80px;
+  }
+  .deptTitle {
+    font-size: 0.8rem;
+  }
+  .viewMore {
+    font-size: 0.8rem;
   }
   footer .footerMenu a {
     font-size: 0.6rem;
@@ -596,6 +734,12 @@ footer label {
   }
   .getStarted {
     padding: 5px 15px;
+    font-size: 0.7rem;
+  }
+  .deptTitle {
+    font-size: 0.7rem;
+  }
+  .viewMore {
     font-size: 0.7rem;
   }
   footer .socialIcons {
