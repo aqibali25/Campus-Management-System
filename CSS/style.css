@@ -396,6 +396,49 @@ section {
 .viewMore i {
   margin-left: 5px;
 }
+
+/* ### SECTION 5 ### */
+
+.aboutCampus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 20px;
+  width: 70%;
+  height: 70%;
+}
+.aboutCampusImage {
+  width: 40%;
+  height: 100%;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.aboutCampusImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+}
+
+.aboutCampusText {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  row-gap: 20px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.aboutCampusText h2 {
+  font-size: 2rem;
+}
+.aboutCampusText p {
+  font-size: 1.2rem;
+  text-align: justify;
+}
 /* ###  FOOTER  ### */
 
 footer {
@@ -521,6 +564,31 @@ footer label {
     }
     .viewMore {
       font-size: 0.8rem;
+    }
+    .section-5 {
+      height: fit-content;
+      padding: 50px 0;
+    }
+    .aboutCampus {
+      flex-direction: column;
+      row-gap: 30px;
+      height: 90%;
+    }
+    .aboutCampusImage,
+    .aboutCampusText {
+      width: 100%;
+      height: 50%;
+      align-items: center;
+    }
+    .aboutCampusText h2 {
+      width: 100%;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+    .aboutCampusText p {
+      width: 100%;
+      font-size: 1rem;
+      /* text-align: center; */
     }
   }
 }
