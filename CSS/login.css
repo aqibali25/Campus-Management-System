@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+nav {
+  position: relative;
+}
+main {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+main::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh + 90px);
+  background-color: #000000;
+  opacity: 0.3;
+}
+main img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+main form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  color: #ffffff;
+  background-color: #474a6783;
+  backdrop-filter: blur(5px);
+  width: 43%;
+  height: 82%;
+  border-radius: 10px;
+}
+main form img {
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 150px;
+  height: 150px;
+  z-index: 1;
+}
+form .reglabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main form .reglabel1 {
+  font-size: 1.8rem;
+}
+
+main form .reglabel2 {
+  font-size: 0.9em;
+  font-weight: 100;
+}
+form .inputfields {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  width: 85%;
+  height: fit-content;
+  overflow: hidden;
+}
+form .inputfields input {
+  width: 100%;
+  padding: 3px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+form .inputfields input::placeholder {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 100;
+  letter-spacing: 1px;
+  padding: 10px;
+}
+form .inputfields input:last-child {
+  background-color: #e5b300;
+  border: 2px solid #e5b300;
+  border: none;
+  color: #ffffff;
+  width: 30%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+form .inputfields input:last-child:hover {
+  background-color: transparent;
+  border: 2px solid #e5b300;
+}
+
+form .copyright {
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+form label[for="copyright"],
+form label[for="phomenumber"] {
+  font-size: 0.7rem;
+}

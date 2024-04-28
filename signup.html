@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="shortcut icon" href="assets/Logo.png" type="image/x-icon" />
+    <title>Registration</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="assets/Logo.png" alt="Salu logo" />
+        <a href="index.html" class="name">
+          <label for="name">SHAH ABDUL LATIF UNIVERSITY</label>
+          <label>GHOTKI CAMPUS</label>
+        </a>
+      </div>
+      <div class="navAndSignup" id="navAndSignup">
+        <div class="navLinks">
+          <a href="index.html" class="home">Home</a>
+          <a href="#" class="faculty">Faculty</a>
+          <a href="#" class="admission">Admission</a>
+          <a href="#" class="news">News</a>
+          <a href="#" class="about">About</a>
+        </div>
+        <div class="loginSignUp">
+          <a href="login.html" class="login">LOGIN</a>
+          <a href="signup.html" class="signup">SIGN UP</a>
+        </div>
+      </div>
+      <label for="check" class="menuButton" id="menuButton">
+        <input id="check" type="checkbox" />
+        <span class="top"></span>
+        <span class="mid"></span>
+        <span class="bot"></span>
+      </label>
+    </nav>
+    <main>
+      <img src="assets/Background.jpg" alt="Image" class="backgroundImage" />
+      <form action="index.html">
+        <img src="assets/Logo.png" alt="Logo" />
+        <div class="reglabel">
+          <label class="reglabel1">New User Registration</label>
+          <label class="reglabel2">Kindly Register For Admission</label>
+        </div>
+        <div class="inputfields">
+          <input
+            type="text"
+            id="CNICNumber"
+            name="NumberorEmail"
+            pattern="[0-9]{5}-[0-9]{7}-[0-9]{1}"
+            title="Please enter a valid Pakistani CNIC number format (e.g., 11111-1111111-1)"
+            maxlength="15"
+            placeholder="CNIC"
+            autocomplete="off"
+            required
+          />
+          <label for=""
+            >................................................................................................OR................................................................................................</label
+          >
+          <input
+            type="tel"
+            inputmode="numeric"
+            pattern="^\+92 [0-9]{3} [0-9]{3} [0-9]{4}$"
+            title="Please enter a valid Pakistani phone number format (e.g., 0300-1234567)"
+            name="NumberorEmail"
+            placeholder="Phone Number"
+            autocomplete="off"
+            required
+          />
+          <input type="password" placeholder="Password" required />
+          <input type="password" placeholder="Confirm Password" required />
+          <input
+            type="submit"
+            name="Register"
+            id="registrationbtn"
+            value="Register"
+          />
+        </div>
+        <div class="copyright">
+          <label for="copyright">RegisCopyright © 2024 SALU.</label>
+          <label for="phomenumber">Phone: 0243-920126ter</label>
+        </div>
+      </form>
+    </main>
+    <script>
+      const CNICNumberInput = document.getElementById("CNICNumber");
+
+      CNICNumberInput.addEventListener("input", function () {
+        var value = this.value;
+        if (value.length === 5 || value.length === 13) {
+          this.value = value + "-";
+        }
+      });
+    </script>
+    <script src="JavaScript/script.js"></script>
+  </body>
+</html>
